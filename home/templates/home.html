@@ -1,15 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
 
 
-<html>
-    <head>
-        <title>Hello World!</title>
-    </head>
-<body>
-    <h1> Hello World! </h1>
+
+{% block content %}
+
+    <div>
+    <h2><a href="/">Home page</a></h2>
         <p> Here is some text on the page
     </p>
         <a href="/about">This is a link to the about page</a>
+    </div>
+
+ {% endblock %}
 
 
-</body>
-</html>
