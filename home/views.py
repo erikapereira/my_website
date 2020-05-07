@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import ContactForm
+from .models import Contact
 
 def home(request):
     return render(request, 'home.html', {})
