@@ -10,3 +10,6 @@ def about(request):
     form = ContactForm()
     # fix this bit!
     # make html work D:
+
+def portfolio (request):
+    return render(request, 'portfolio.html', {})
