@@ -13,7 +13,7 @@ def about(request):
             form = form.save()
             form.date_sent = timezone.now()
             form.save()
-
+            return render(request, "sent.html")
 
 
     form = ContactForm
@@ -24,5 +24,7 @@ def about(request):
 def portfolio (request):
     return render(request, 'portfolio.html', {})
 
+def sent (request):
+    return render(request, 'sent.html')
 
 
