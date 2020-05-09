@@ -17,6 +17,8 @@ def about(request):
 
     else:
         form = ContactForm()
+        # needs to jump to contact section
+
 
     return render(request, "about.html", {'form': form})
 #
