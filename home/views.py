@@ -15,9 +15,14 @@ def about(request):
             form.save()
             return render(request, "sent.html")
 
+    else:
+        form = ContactForm()
 
-    form = ContactForm
     return render(request, "about.html", {'form': form})
+#
+# get req
+# submit valid
+# submit invalid
 
 
 
