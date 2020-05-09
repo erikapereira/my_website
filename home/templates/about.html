@@ -41,9 +41,8 @@
       </div>
 
 
-      <form action="/about" target="_blank" class= "w3-row-padding">
             <p>Leave me a note:</p>
-        <form method="POST" class="contact" enctype="multipart/form-data">{% csrf_token %}
+        <form method="POST" action="/about" class="contact w3-row-padding" enctype="multipart/form-data">{% csrf_token %}
 
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">

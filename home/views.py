@@ -13,13 +13,11 @@ def about(request):
             form = form.save()
             form.date_sent = timezone.now()
             form.save()
-            
-
 
 
 
     form = ContactForm
-    return render(request, "about.html", {'form' : form})
+    return render(request, "about.html", {'form': form})
 
 
 

@@ -12,8 +12,6 @@ class ContactForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'class': 'w3-input w3-border', 'placeholder': "Name"}),
             'email': forms.TextInput(attrs={'class': 'w3-input w3-border', 'placeholder': "Email"}),
             'message': forms.TextInput(attrs={'class': 'w3-input w3-border', 'placeholder': "Message"}),
-
-
         }
 
 
