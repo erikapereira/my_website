@@ -13,7 +13,7 @@ def about(request):
             form = form.save()
             form.date_sent = timezone.now()
             form.save()
-            return #something
+            
 
 
 
