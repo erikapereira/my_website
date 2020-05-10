@@ -15,7 +15,7 @@ def about(request):
             form.date_sent = timezone.now()
             form.save()
             mail_admins(
-                'subject',
+                'You have received a',
                 'message',
                 fail_silently=False,
             )

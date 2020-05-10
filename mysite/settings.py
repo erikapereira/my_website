@@ -27,14 +27,23 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+ADMINS = [('Erika', 'erika@erikapereira.com')]
+
 #not for prod use
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # prod use?
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
 # Host for sending e-mail.
-EMAIL_HOST = 'localhost'
+EMAIL_HOST = 'smtp-mail.outlook.com'
 # Port for sending e-mail.
-EMAIL_PORT = 1025
+EMAIL_PORT = 587
+DEFAULT_EMAIL_FROM = 'pereiraerika@outlook.com'
+EMAIL_HOST_USER = 'pereiraerika@outlook.com'
+EMAIL_HOST_PASSWORD = '-'
+SERVER_EMAIL = 'erika@erikapereira.com'
+
 
 
 # Application definition
