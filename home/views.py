@@ -28,6 +28,8 @@ def about(request):
     return render(request, "about.html", {'form': form})
 
 
+# send email separate to about - cannot be dependent on this bit!
+# if email doesnt send - error notification.
 
 
 def portfolio (request):
