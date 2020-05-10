@@ -58,7 +58,7 @@ class AboutPageTests(TestCase):
             "message": "Test message"
         })
         self.assertEquals(response.status_code, 200)
-        # self.assertContains(response, "This field is required.")
+        self.assertContains(response, "This field is required.")
         self.assertEqual(Contact.objects.count(), 0)
 
 
