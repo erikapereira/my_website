@@ -27,6 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+#not for prod use
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# prod use?
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# Host for sending e-mail.
+EMAIL_HOST = 'localhost'
+# Port for sending e-mail.
+EMAIL_PORT = 1025
+
 
 # Application definition
 

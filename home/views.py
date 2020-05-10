@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from django.utils import timezone
+from django.core.mail import mail_admins
 
 
 def home(request):
@@ -13,18 +14,19 @@ def about(request):
             form = form.save()
             form.date_sent = timezone.now()
             form.save()
+            mail_admins(
+                'subject',
+                'message',
+                fail_silently=False,
+            )
             return render(request, "sent.html")
 
     else:
         form = ContactForm()
         # needs to jump to contact section
 
-
     return render(request, "about.html", {'form': form})
-#
-# get req
-# submit valid
-# submit invalid
+
 
 
 
