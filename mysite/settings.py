@@ -32,7 +32,7 @@ ADMINS = [('Erika', 'erika@erikapereira.com')]
 #not for prod use
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# prod use?
+# prod use
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 # Host for sending e-mail.

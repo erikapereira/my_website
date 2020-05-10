@@ -15,8 +15,8 @@ def about(request):
             form.date_sent = timezone.now()
             form.save()
             mail_admins(
-                'You have received a',
-                'message',
+                'You have received a message',
+                'http://127.0.0.1:8000/admin',
                 fail_silently=False,
             )
             return render(request, "sent.html")
