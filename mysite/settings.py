@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -21,6 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'liqg=3@ig65%9)p%o@l&w(v-^3!ou5fkd#xic*i=uo5y4#_ejl'
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,10 +34,11 @@ ALLOWED_HOSTS = ["*"]
 ADMINS = [('Erika', 'erika@erikapereira.com')]
 
 #not for prod use
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# run this command for test server python -m smtpd -n -c DebuggingServer localhost:1025
 
 # prod use
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 # Host for sending e-mail.
 EMAIL_HOST = 'smtp-mail.outlook.com'
@@ -41,8 +46,9 @@ EMAIL_HOST = 'smtp-mail.outlook.com'
 EMAIL_PORT = 587
 DEFAULT_EMAIL_FROM = 'pereiraerika@outlook.com'
 EMAIL_HOST_USER = 'pereiraerika@outlook.com'
-EMAIL_HOST_PASSWORD = 'my-password'
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 SERVER_EMAIL = 'erika@erikapereira.com'
+
 
 
 
