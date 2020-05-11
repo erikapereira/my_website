@@ -44,10 +44,10 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp-mail.outlook.com'
 # Port for sending e-mail.
 EMAIL_PORT = 587
-DEFAULT_EMAIL_FROM = 'pereiraerika@outlook.com'
-EMAIL_HOST_USER = 'pereiraerika@outlook.com'
+DEFAULT_EMAIL_FROM = os.environ.get("DEFAULT_EMAIL_FROM")
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
-SERVER_EMAIL = 'erika@erikapereira.com'
+SERVER_EMAIL = os.environ.get("SERVER_EMAIL")
 
 
 
